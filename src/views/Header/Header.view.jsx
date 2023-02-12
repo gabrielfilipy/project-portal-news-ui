@@ -14,29 +14,24 @@ function HeaderView () {
 
     return (
         <div className="header">
-            <Flex 
-                align="center"
-                justify="center"
-                h="2vh">
-                <Box maxW={900} w="100%">
-                    <Grid templateColumns='repeat(5, 1fr)' gap={4}>
-                        <GridItem colSpan={2} h='10'>
-                            <a href="" className="logo">reivindica.mpu</a>
-                        </GridItem>
-                        <GridItem colStart={4} colEnd={6} h='10' textAlign="right">
-                            <Router>
-                                <ul className="list" >
-                                    <li className="item"><Link to="/">Home</Link></li>
-                                    <li className="item"><Link to="/reivindicacao">Reivindicação</Link></li>
-                                </ul>
-                                    <Routes>
-                                        <Route path="/reivindicacao" element={<AddNewsView />} > </Route>
-                                    </Routes>
-                            </Router>
-                        </GridItem>
-                    </Grid>
-                </Box>
-            </Flex>
+            <div className="content">
+                <div className="logo left">
+                    <p>Divulga.mpu</p>
+                </div>
+                <nav className="desktop right">
+                    <ul>
+                        <li><Link to="/adicionar-noticia">Cadastrar</Link></li>
+                        <li><Link to="/listar-noticia">Listar</Link></li>
+                    </ul>
+                </nav>
+                <nav className="mobile right">
+                    <ul >
+                        <li><Link to="/adicionar-noticia">Cadastrar</Link></li>
+                        <li><Link to="/listar-noticia">Listar</Link></li>
+                    </ul>
+                </nav>
+                <div className="clear"></div>
+            </div>
         </div>
     );
 

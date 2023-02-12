@@ -1,19 +1,23 @@
 .header {
-    width: 100%;
-    padding: 15px;
+    padding: 10px 0;
     background: #1976d2;
     color: white;
 }
 
-.logo {
+.logo p {
+    font-size: 19px;
+    text-transform: lowercase;
     font-weight: bold;
 }
 
-.list {
-    display: flex;
+nav.desktop ul {
     list-style: none;
 }
 
-.item {
-    margin-right: 1em;
+nav.desktop li {
+    font-weight: 300;
+    font-size: 15px;
+    padding: 0 15px;
+    text-transform: uppercase;
+    display: inline-block;
 }
